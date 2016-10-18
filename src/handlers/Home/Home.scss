@@ -18,7 +18,8 @@ table {
     }
   }
 
-  &.orders-list {
+  &.orders-list,
+  &.order-items {
     td {
       border-bottom: 1px solid #CCCCCC;
     }

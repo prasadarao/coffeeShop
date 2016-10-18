@@ -7,14 +7,13 @@ class AddMenuItem extends React.Component {
 
   constructor() {
     super();
-    this.state = { types: [], models: [], sizes: []};
+    this.state = { types: [], models: [], sizes: [] };
   }
 
   componentDidMount() {
     fetch('http://localhost:5000/api/productOptions')
       .then(result=> {
         return result.json();
-        
       })
       .then(function(parsedData) {
         this.setState({ types: parsedData.types, models: parsedData.models, sizes: parsedData.sizes });

@@ -2,24 +2,35 @@ import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
 import "./common";
 
-const App = ({ children }) =>
-  <div>
-      <div className="logo">
-        Coffee Shop
-      </div>
-      <header>
-        <Link className="nav-item" to="/addOrder">Add Order</Link>
-        <Link className="nav-item" to="/orders">Orders</Link>
-        <Link className="nav-item" to="/menu">Menu</Link>
-        <Link className="nav-item" to="/addMenuItem">Add Menu Item</Link>
-      </header>
-      { children }
-      <footer>
-      </footer>
-  </div>;
+const menuitems = { '/addOrder': 'Add Order', '/orders': 'Orders', '/menu': 'Menu', '/addMenuItem': 'Add Menu Item'}
 
-App.propTypes = {
-    children: PropTypes.object
-};
+export default class App extends React.PureComponent {
+  constructor(props) {
+   super(props);
+  };
 
-export default App;
+  static propTypes = {
+   children: PropTypes.object,
+   selectedMenuItem: PropTypes.string
+  };
+
+  render() {
+    const { children, route } = this.props;
+  
+    return (<div>
+        <div className="logo">
+          Coffee Shop
+        </div>
+        <header>
+          { Object.keys(menuitems).map(key => {
+            return <Link className={this.props.routes[this.props.routes.length - 1].selectedMenuItem === key ? 'active' : ''} to={key}>{menuitems[key]}</Link>
+            })
+          }
+        </header>
+        { children }
+        <footer>
+          Copyright @Prasad
+        </footer>
+    </div>)
+  }
+}

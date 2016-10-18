@@ -7,11 +7,11 @@ import Add from '../src/handlers/Add';
 import AddMenuItem from '../src/handlers/AddMenuItem';
 
 export default (
-	<Route path="/" component={ App }>
-		<IndexRoute component={Home} />
-		<Route path="/orders" component={Home} />
-		<Route path="/menu" component={Menu} />
-		<Route path="/addOrder" component={Add} />
-		<Route path="/addMenuItem" component={AddMenuItem} />
-	</Route>
+  <Route path="/" component={ App }>
+    <IndexRoute component={Home} />
+    <Route path="/orders" component={Home} selectedMenuItem="/orders" />
+    <Route path="/menu" component={Menu} selectedMenuItem="/menu"/>
+    <Route path="/addOrder" component={Add} selectedMenuItem="/addOrder"/>
+    <Route path="/addMenuItem" component={AddMenuItem} selectedMenuItem="/addMenuItem"/>
+  </Route>
 );

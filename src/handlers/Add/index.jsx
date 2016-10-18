@@ -93,7 +93,7 @@ class Add extends React.Component {
 
         {this.state.cartItems.length > 0 && 
           <form name='OrderForm'>
-            <table>
+            <table className='order-items'>
               <tr>
                 <td>S.No</td>
                 <td>Product</td>
