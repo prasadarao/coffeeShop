@@ -21,3 +21,10 @@ node server.js
 ```
 npm start
 ```
+
+Test
+---
+
+```
+http://localhost:3000/
+```

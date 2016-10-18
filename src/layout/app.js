@@ -15,8 +15,6 @@ const App = ({ children }) =>
       </header>
       { children }
       <footer>
-          <Link className="nav-item" to="/">Home</Link>
-          <Link className="nav-item" to="/menu">Menu</Link>
       </footer>
   </div>;
 
