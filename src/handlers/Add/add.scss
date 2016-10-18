@@ -1,0 +1,24 @@
+.selection {
+  border: 1px solid #EEEEEE;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+
+  .option {
+    margin-right: 10px;
+
+    &.product {
+      width: 250px;
+    }
+  }
+}
+
+.person {
+  margin: 20px 0;
+}
+
+.btn {
+  &.big {
+    margin-left: 85px;
+  }
+}

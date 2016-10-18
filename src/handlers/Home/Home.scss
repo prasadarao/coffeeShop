@@ -1,0 +1,21 @@
+.title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+table {
+  width: 80%;
+  border-spacing: 0;
+
+  th {
+    text-align: left;
+  }
+
+  tr {
+    th,
+    td {
+      padding: 5px;
+      border-bottom: 1px solid #CCCCCC;
+    }
+  }
+}
