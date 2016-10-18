@@ -15,16 +15,9 @@ npm install
 Usage
 ---
 ```
-node start
+node server.js
 ```
 
 ```
-npm server.js
-```
-
-
-Compile
----
-```
-npm run compile
+npm start
 ```
