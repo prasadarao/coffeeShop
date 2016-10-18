@@ -1,67 +1,79 @@
 body {
-	font-family: Arial;
-	font-size: 16px;
+  font-family: Arial;
+  font-size: 16px;
 }
 
 #root {
-	min-width: 990px;
-	margin: 0 auto;
+  min-width: 990px;
+  margin: 0 auto;
 }
 
 .logo {
-	height: 50px;
-	font-size: 26px;
-	font-weight: bold;
-	line-height: 50px;
-	padding: 0 10px;
+  height: 50px;
+  font-size: 26px;
+  font-weight: bold;
+  line-height: 50px;
+  padding: 0 10px;
 }
 
 header {
-	height: 40px;
-	background: #21a024;
-	margin-bottom: 10px;
+  height: 40px;
+  background: #21a024;
+  margin-bottom: 10px;
 
-	a {
-		font-size: 13px;
-		padding: 0 10px;
-		display: inline-block;
-		height: 40px;
-		line-height: 40px;
-		color: #FFFFFF;
-	}
+  a {
+    font-size: 13px;
+    padding: 0 10px;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    color: #FFFFFF;
+  }
 }
 
 h1 {
-	font-size: 16px;
+  font-size: 16px;
 }
 
 input,
 select {
-	font-size: 14px;
-	border: 1px solid #CCCCCC;
-	height: 28px;
-	background: #FFFFFF;
+  font-size: 14px;
+  border: 1px solid #CCCCCC;
+  height: 28px;
+  background: #FFFFFF;
 }
 
 .btn {
-	padding: 5px 10px;
-	font-size: 14px;
-	font-weight: normal;
-	background: #fea400;
-	color: #FFFFFF;
-	box-shadow: 0 1px 3px rgba(0,0,0,0.2);
-	border: 0;
-	border-radius: 3px;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: normal;
+  background: #fea400;
+  color: #FFFFFF;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  border: 0;
+  border-radius: 3px;
 
-	&.btn-primary {
-		font-size: 16px;
-	}
+  &.btn-primary {
+    font-size: 16px;
+  }
 
-	&.big {
-		padding: 10px 20px;
-	}
+  &.big {
+    padding: 10px 20px;
+  }
+}
+
+.clearfix {
+  &:after,
+  &:before {
+    display: table;
+    content: " ";
+  }
+
+  &:after {
+    clear: both;
+  }
 }
 
 .base-container {
-	margin-bottom: 40px;
+  margin-bottom: 40px;
 }

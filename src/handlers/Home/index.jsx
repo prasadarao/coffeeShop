@@ -13,11 +13,9 @@ export default class Home extends React.Component {
     fetch('http://localhost:5000/api/orders')
       .then(result=> {
         return result.json();
-        console.log('result:', result.json());
         
       })
       .then(function(parsedData) {
-        console.log('parsedData:', parsedData);
         this.setState({ items: parsedData.orders });
       }.bind(this));
   }
@@ -25,9 +23,9 @@ export default class Home extends React.Component {
 
   render() {
     return (
-      <div className="base-container">
-        <div className="title">Orders</div>
-        <table>
+      <div className='base-container'>
+        <div className='title'>Orders</div>
+        <table className='orders-list'>
           <tr>
             <th>S.No</th>
             <th>Order ID</th>
@@ -37,7 +35,7 @@ export default class Home extends React.Component {
           { this.state.items.map((item, index)=> { 
             return <tr>
                 <td>{index + 1}</td>
-                <td>{item.order_id}</td>
+                <td>{item.id}</td>
                 <td>{item.user_name}</td>
                 <td>{item.total}</td>
               </tr>
