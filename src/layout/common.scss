@@ -23,11 +23,16 @@ header {
 
   a {
     font-size: 13px;
-    padding: 0 10px;
+    padding: 0 15px;
     display: inline-block;
     height: 40px;
     line-height: 40px;
     color: #FFFFFF;
+
+    &.active {
+      background: #E0FDE0;
+      color: #000000;
+    }
   }
 }
 
